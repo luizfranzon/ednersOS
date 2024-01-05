@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 16px;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: var(--base);
+  font-family: monospace;
+  font-size: 1.3rem;
+
+  color: var(--text);
+}
+
+#commandHistory {
+  display: flex;
+  flex-direction: column;
+  white-space: pre;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: blinker 1s linear infinite;
+  color: var(--text);
+}
+
+.cursorLine {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 50vh;
+}
